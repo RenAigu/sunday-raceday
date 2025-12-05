@@ -12,7 +12,8 @@ Car: **[{{ $car.year }} {{ $car.manufacturer | markdownify }} {{ $car.model | ma
 Tune: **{{ .Page.Params.class }} - {{ .Page.Params.tune_name }}** / {{ .Page.Params.share_code }}
 
 Car Chosen by: **{{ .Page.Params.car_by }}**
-Tune by: **{{ .Page.Params.tune_by }} -**">
+Tune by: **{{ .Page.Params.tune_by }} -**
+{{ end }}">
   <meta property="og:type" content="article">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:image" content="{{ .Page.Site.BaseURL }}/images/{{ .Page.Params.car_image }}">
