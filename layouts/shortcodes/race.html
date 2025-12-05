@@ -6,7 +6,7 @@
 Car: {{ .Page.Params.car | markdownify }}</span></div>
 {{ else }}
 {{ $allCars := index $.Site.Data.cars }}
-{{ $cars := where $allCars \"id" .Page.Params.car_id }}
+{{ $cars := where $allCars \"id\" .Page.Params.car_id }}
 {{ $car := index $cars 0 }}
 Car: **[{{ $car.year }} {{ $car.manufacturer | markdownify }} {{ $car.model | markdownify }}](https://www.kudosprime.com/fh5/car_sheet.php?id={{ $car.id }})**
 Tune: **{{ .Page.Params.class }} - {{ .Page.Params.tune_name }}** / {{ .Page.Params.share_code }}
